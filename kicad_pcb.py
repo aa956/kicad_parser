@@ -89,6 +89,6 @@ class KicadPCB(SexpParser):
 
     @staticmethod
     def load(filename, quote_no_parse=None):
-        with open(filename,'r') as f:
+        with open(filename,'r', encoding='utf-8') as f:
             return KicadPCB(parseSexp(f.read(), quote_no_parse))
 
